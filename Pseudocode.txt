@@ -1,0 +1,44 @@
+---Character objects---
+
+hp = ?;
+baseAp = ?;
+ap = baseAp;
+cp = ?;
+
+---Global variables---
+
+stage = 1;
+hero {};
+enemy {};
+
+
+function: attack()
+
+if stage = 1
+	update textArea: "Select a hero!"
+
+if stage = 2
+	update textArea: "Select an enemy!"
+
+if stage = 3
+	enemy.hp -= hero.ap
+	hero.ap += hero.baseAP
+	if enemy.hp > 0
+		hero.hp -= enemy.cp
+		if hero.hp > 0
+			update textArea with combat data
+		if hero.hp <= 0
+			stage = 4;
+			update textArea with defeat message and reveal restart button
+	if enemy.hp <= 0
+		enemy = {}
+		remove defeated object
+		if no more enemies
+			stage = 4;
+			update textArea with game over message
+			reveal restart button
+		else
+			update textArea with victory message
+			stage = 2;
+			
+		

@@ -1,0 +1,34 @@
+1) Make an "attack" button and put it in "fightSection"
+
+________________________________________________________
+
+2) Make a "restart button" to display in "textArea" when stage 4 is reached
+
+________________________________________________________
+
+3) Write code for the following events, with stages
+
+*When attack is clicked...
+	attack()
+
+*When restart is clicked...
+	restart()
+
+*When Luke's character box is clicked...
+	if stage = 1 {
+		hero = lukeSkywalker
+		move luke's character box to "yourCharacter"
+		stage = 2
+		move other 3 character boxes to "enemiesAvailable"
+	}
+	if stage = 2 {
+		enemy = lukeSkywalker
+		move luke's character box to "fightSection"
+		stage = 3
+	}
+
+Is luke's code repeatable for the other 3 character boxes?  Or do you need to write it 4 times?
+
+________________________________________________________
+
+4) Style the site
