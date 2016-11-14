@@ -6,10 +6,43 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!--My css file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!--jQuery link-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!--Javascript file for Hangman Game-->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
+
+	<div class="container" id="pageContainer">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row" id="yourCharacter"></div>
+				<div class="row" id="enemiesAvailable"></div>
+				<div class="row" id="fightSection"></div>
+				<div class="row" id="textArea"></div>
+			</div>
+			<div class="col-md-4">
+				<div class="row" id="selectYourHero">
+					<div class="characterBox" id="LS">
+						100
+						<img src="assets/images/lukeSkywalker.jpg">
+					</div>
+					<div class="characterBox" id="OW">
+						120
+						<img src="assets/images/obiWan.jpg">
+					</div>
+					<div class="characterBox" id="DS">
+						150
+						<img src="assets/images/darthSidious.jpg">
+					</div>
+					<div class="characterBox" id="DM">
+						180
+						<img src="assets/images/darthMaul.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

@@ -1,0 +1,36 @@
+#selectYourHero {
+	height: 610px;
+	border: 1px solid black;
+}
+
+#yourCharacter {
+	height: 120px;
+	border: 1px solid black;
+}
+
+#enemiesAvailable {
+	height: 120px;
+	border: 1px solid black;
+}
+
+#fightSection {
+	height: 250px;
+	border: 1px solid black;
+}
+
+#textArea {
+	height: 120px;
+	border: 1px solid black;
+}
+
+.characterBox {
+	height: 115px;
+	width: 115px;
+	border: 1px solid green;
+}
+
+img {
+	height: 80px;
+	width: 80px;
+	border: 1px solid black;
+}
