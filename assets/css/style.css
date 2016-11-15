@@ -1,5 +1,10 @@
 #selectYourHero {
-	height: 610px;
+	height: 305px;
+	border: 1px solid black;
+}
+
+#characterStats {
+	height: 305px;
 	border: 1px solid black;
 }
 
@@ -27,10 +32,11 @@
 	height: 115px;
 	width: 115px;
 	border: 1px solid green;
+	display: inline-block;
 }
 
 img {
-	height: 80px;
-	width: 80px;
+	height: 115px;
+	width: 115px;
 	border: 1px solid black;
 }
