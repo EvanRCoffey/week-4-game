@@ -1,9 +1,9 @@
 //Determines what should happen on certain click events
 var stage = 1;
 //Empty object to store hero character stats
-var hero {};
+var hero = {};
 //Empty object to store enemy character stats
-var enemy {};
+var enemy = {};
 
 //Luke Skywalker object, with stats
 var lukeSkywalker = {
@@ -41,10 +41,12 @@ var darthMaul = {
 function attack(){
 	//If no hero has been selected...
 	if (stage === 1)
-		//UPDATE TEXTAREA: "SELECT A HERO!"
+		//...inform user
+		$("#textArea").html("Select a hero!")
 	//If no enemy has been selected...
 	if (stage === 2)
-		//UPDATE TEXTAREA: "SELECT AN ENEMY!"
+		//...inform user
+		$("#textArea").html("Select an enemy!")
 	//If a hero and an enemy have both been selected...
 	if (stage === 3) {
 		//...hero attacks enemy
@@ -57,12 +59,14 @@ function attack(){
 			hero.hp -= enemy.cp;
 			//If hero is still alive...
 			if (hero.hp > 0)
-				//UPDATE TEXTAREA WITH COMBAT DATA
+				//...update textarea with combat data
+				$("#textArea").html("Combat data would go here!")
 			//If hero is dead...
 			if (hero.hp <= 0) {
 				//...only the restart button will work
 				stage = 4;
-				//UPDATE TEXTAREA WITH DEFEAT MESSAGE
+				//update textarea with defeat message
+				$("#textArea").html("Defear message would go here!")
 				//REVEAL RESTART BUTTON
 			}
 		}
@@ -74,10 +78,13 @@ function attack(){
 			//If no more enemies...
 				//...only the restart button will work
 				stage = 4;
-				//UPDATE TEXTAREA WITH GAME OVER MESSAGE
+				//...update textarea with game over message
+				$("#textArea").html("Game over message would go here!")
 				//REVEAL RESTART BUTTON
-			//If enemies remain (else)...
-				//UPDATE TEXTAREA WITH VICTORY MESSAGE
+				restart()
+				//If enemies remain (else)...
+				//update textarea with victory message
+				$("#textArea").html("Victory message would go here!")
 				//...wait for user to select another enemy
 				stage = 2;
 		}
@@ -90,4 +97,65 @@ function restart() {
 	hero = {};
 	stage = 1;
 	//MOVE ALL 4 CHARACTERS TO "SELECT YOUR HERO" SECTION
+}
+
+//This button is to be displayed every time you reach stage 4
+//<button type="button" class="btn btn-default" onclick="restart()">Left</button>
+
+
+
+function selectLuke() {
+	if (stage === 1) {
+		hero = lukeSkywalker;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 2;
+		//MOVE OTHER 3 CHARACTER BOXES TO "enemiesAvailable"
+	}
+	else if (stage === 2) {
+		enemy = lukeSkywalker;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 3;
+	}
+}
+
+function selectObiWan() {
+	if (stage === 1) {
+		hero = obiWan;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 2;
+		//MOVE OTHER 3 CHARACTER BOXES TO "enemiesAvailable"
+	}
+	else if (stage === 2) {
+		enemy = obiWan;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 3;
+	}
+}
+
+function selectDarthSidious() {
+	if (stage === 1) {
+		hero = darthSidious;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 2;
+		//MOVE OTHER 3 CHARACTER BOXES TO "enemiesAvailable"
+	}
+	else if (stage === 2) {
+		enemy = darthSidious;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 3;
+	}
+}
+
+function selectDarthMaul() {
+	if (stage === 1) {
+		hero = darthMaul;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 2;
+		//MOVE OTHER 3 CHARACTER BOXES TO "enemiesAvailable"
+	}
+	else if (stage === 2) {
+		enemy = darthMaul;
+		//MOVE CHARACTER BOX TO "yourCharacter"
+		stage = 3;
+	}
 }

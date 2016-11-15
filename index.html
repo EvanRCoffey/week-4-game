@@ -18,24 +18,26 @@
 			<div class="col-md-8">
 				<div class="row" id="yourCharacter"></div>
 				<div class="row" id="enemiesAvailable"></div>
-				<div class="row" id="fightSection"></div>
+				<div class="row" id="fightSection">
+					<button type="button" class="btn btn-default" onclick="attack()">Attack</button>
+				</div>
 				<div class="row" id="textArea"></div>
 			</div>
 			<div class="col-md-4">
 				<div class="row" id="selectYourHero">
-					<div class="characterBox" id="LS">
+					<div class="characterBox" id="LS" onclick="selectLuke()">
 						100
 						<img src="assets/images/lukeSkywalker.jpg">
 					</div>
-					<div class="characterBox" id="OW">
+					<div class="characterBox" id="OW" onclick="selectObiWan()">
 						120
 						<img src="assets/images/obiWan.jpg">
 					</div>
-					<div class="characterBox" id="DS">
+					<div class="characterBox" id="DS" onclick="selectDarthSidious()">
 						150
 						<img src="assets/images/darthSidious.jpg">
 					</div>
-					<div class="characterBox" id="DM">
+					<div class="characterBox" id="DM" onclick="selectDarthMaul()">
 						180
 						<img src="assets/images/darthMaul.jpg">
 					</div>
