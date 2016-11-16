@@ -1,5 +1,1 @@
-* Make a "restart button" to display in "textArea" when stage 4 is reached
-
-* Hide enemies once they are defeated
-
 * Style the site

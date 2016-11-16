@@ -1,42 +1,57 @@
 #selectYourHero {
 	height: 305px;
-	border: 1px solid black;
+	border: 1px solid white;
+	padding: 20px;
 }
 
 #characterStats {
 	height: 305px;
-	border: 1px solid black;
+	border: 1px solid white;
+	padding: 20px;
 }
 
 #yourCharacter {
 	height: 120px;
-	border: 1px solid black;
+	border: 1px solid white;
+	padding-left: 20px;
+	font-size: large;
 }
 
 #enemiesAvailable {
 	height: 120px;
-	border: 1px solid black;
+	border: 1px solid white;
+	padding-left: 20px;
+	font-size: large;
 }
 
 #fightSection {
-	height: 250px;
-	border: 1px solid black;
+	height: 120px;
+	border: 1px solid white;
+	padding-left: 20px;
+	font-size: large;
 }
 
 #textArea {
-	height: 120px;
-	border: 1px solid black;
+	height: 250px;
+	border: 1px solid white;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: large;
 }
 
 .characterBox {
 	height: 115px;
 	width: 115px;
-	border: 1px solid green;
+	border: 1px solid white;
 	display: inline-block;
+	margin-left: 20px;
 }
 
 img {
 	height: 115px;
 	width: 115px;
-	border: 1px solid black;
+}
+
+body {
+	color: skyblue;
 }
